@@ -515,7 +515,6 @@ class Hub(with_metaclass(HubMeta)):  # type: ignore
         # sampling decision
         sampling_context = {
             "transaction_context": transaction.to_json(),
-            "parent_sampled": transaction.parent_sampled,
         }
         sampling_context.update(custom_sampling_context)
         transaction._set_initial_sampling_decision(sampling_context=sampling_context)
